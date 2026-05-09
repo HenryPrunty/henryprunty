@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Henry Prunty Architecture</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <div class="main-wrapper">
         <div class="left-col">
             <div class="nav-group">
@@ -18,34 +16,26 @@
                     <a href="bio.html">Bio</a>
                 </div>
             </div>
-            
-            <a href="mailto:henryprunty2006@gmail.com" class="contact-info">
-                henryprunty2006@gmail.com
-            </a>
+            <a href="mailto:henryprunty2006@gmail.com" class="contact-info">henryprunty2006@gmail.com</a>
         </div>
 
         <div class="right-col">
             <div class="slideshow-container">
-                <img class="slide active" src="https://via.placeholder.com/1200x800/FFFFFF/000000?text=Project+Graphic+1" alt="Project 1">
-                <img class="slide" src="https://via.placeholder.com/800x1200/FFFFFF/000000?text=Project+Graphic+2" alt="Project 2">
-                <img class="slide" src="https://via.placeholder.com/1000x1000/FFFFFF/000000?text=Project+Graphic+3" alt="Project 3">
+                <img class="slide active" src="https://via.placeholder.com/1200x800" alt="1">
+                <img class="slide" src="https://via.placeholder.com/800x1200" alt="2">
+                <img class="slide" src="https://via.placeholder.com/1000x1000" alt="3">
             </div>
         </div>
     </div>
 
     <script>
-        let currentSlide = 0;
+        let current = 0;
         const slides = document.querySelectorAll('.slide');
-        
-        function nextSlide() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
-
-        // Sets the rotation to 6000ms (6 seconds)
-        setInterval(nextSlide, 6000);
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 6000);
     </script>
-
 </body>
 </html>
