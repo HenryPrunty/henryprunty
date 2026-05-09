@@ -2,13 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Henry Prunty Architecture</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <div class="main-wrapper">
         <div class="left-col">
             <div class="nav-group">
@@ -23,52 +20,40 @@
 
         <div class="right-col">
             <div class="view-controls">
-                <button id="grid-btn" class="view-btn active">Grid</button>
-                <button id="list-btn" class="view-btn">List</button>
+                <span id="grid-btn" class="view-btn active">grid</span>
+                <span id="list-btn" class="view-btn">list</span>
             </div>
 
             <div id="project-container" class="project-grid">
-                
-                <a href="project-one.html" class="project-card">
-                    <img src="https://via.placeholder.com/600x450/000000/FFFFFF?text=Project+1" class="project-img">
-                    <div class="project-info">
-                        <div class="info-text">
-                            <strong>2101 Brandywine st.</strong><br>
-                            Spring 2026 | Instructor: Patrick Till
+                <a href="#" class="project-card">
+                    <div class="card-inner">
+                        <img src="https://via.placeholder.com/600x450" class="project-img">
+                        <div class="project-info-overlay">
+                            <div class="info-text">Brooklyn Passive House<br>Fall 2025<br>Instructor: Name</div>
                         </div>
                     </div>
+                    <div class="list-text">Brooklyn Passive House — Fall 2025 — Instructor: Name</div>
                 </a>
 
-                <a href="project-two.html" class="project-card">
-                    <img src="https://via.placeholder.com/600x450/000000/FFFFFF?text=Project+2" class="project-img">
-                    <div class="project-info">
-                        <div class="info-text">
-                            <strong>Playscape</strong><br>
-                            Spring 2026 | Instructor: Patrick Till
+                <a href="#" class="project-card">
+                    <div class="card-inner">
+                        <img src="https://via.placeholder.com/600x450" class="project-img">
+                        <div class="project-info-overlay">
+                            <div class="info-text">2101 Brandywine st.<br>Spring 2026<br>Instructor: Patrick Till</div>
                         </div>
                     </div>
+                    <div class="list-text">2101 Brandywine st. — Spring 2026 — Instructor: Patrick Till</div>
                 </a>
-
             </div>
         </div>
     </div>
 
     <script>
-        const gridBtn = document.getElementById('grid-btn');
-        const listBtn = document.getElementById('list-btn');
-        const container = document.getElementById('project-container');
-
-        gridBtn.addEventListener('click', () => {
-            container.classList.remove('list-view');
-            gridBtn.classList.add('active');
-            listBtn.classList.remove('active');
-        });
-
-        listBtn.addEventListener('click', () => {
-            container.classList.add('list-view');
-            listBtn.classList.add('active');
-            gridBtn.classList.remove('active');
-        });
+        const g = document.getElementById('grid-btn');
+        const l = document.getElementById('list-btn');
+        const c = document.getElementById('project-container');
+        g.onclick = () => { c.classList.remove('list-view'); g.classList.add('active'); l.classList.remove('active'); }
+        l.onclick = () => { c.classList.add('list-view'); l.classList.add('active'); g.classList.remove('active'); }
     </script>
 </body>
 </html>
