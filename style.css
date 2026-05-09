@@ -7,18 +7,18 @@ body {
     color: #000;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     overflow: hidden;
 }
 
 .main-wrapper {
     display: flex;
-    flex: 1;
+    width: 100%;
+    height: 100%;
     padding: 40px;
     gap: 60px;
 }
 
-/* LEFT COLUMN: NAV & CONTACT */
+/* LEFT COLUMN */
 .left-col {
     width: 250px;
     display: flex;
@@ -30,7 +30,7 @@ body {
 
 .logo {
     font-size: 18px;
-    font-weight: 600; /* Semi-bold */
+    font-weight: 600;
     text-decoration: none;
     color: #000;
     margin-bottom: 25px;
@@ -47,26 +47,23 @@ body {
     text-decoration: none;
     color: #000;
     font-size: 15px;
-    font-weight: 400; /* not bold */
+    font-weight: 600;
 }
 
 .contact-info {
     font-size: 13px;
     color: #000;
     text-decoration: none;
-    font-weight: 400; /* Not bold */
 }
 
-/* RIGHT COLUMN: CONTENT */
+/* RIGHT COLUMN */
 .right-col {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
+    height: 100%;
 }
 
-/* VIEW CONTROLS - Text Only */
 .view-controls {
     display: flex;
     gap: 15px;
@@ -75,38 +72,40 @@ body {
 
 .view-btn {
     font-size: 13px;
-    font-weight: 400;
     cursor: pointer;
     color: #999;
     text-transform: lowercase;
     background: none;
     border: none;
-    padding: 0;
 }
 
 .view-btn.active { color: #000; }
 
-/* PROJECT GRID */
+/* PROJECT GRID LOGIC */
+.project-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    width: 100%;
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
-    width: 100%;
-    overflow-y: auto;
 }
 
-/* THE FLIP (Swap) EFFECT */
 .project-card {
     text-decoration: none;
     color: inherit;
     display: block;
+    position: relative;
 }
 
 .card-inner {
     position: relative;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4/3;
     width: 100%;
-    overflow: hidden;
+    background: #f9f9f9; /* Fallback for broken images */
 }
 
 .project-img {
@@ -126,37 +125,66 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0; /* Hidden until hover */
+    opacity: 0;
 }
 
-/* This is the "Flip/Swap" Trigger */
-.project-card:hover .project-img { display: none; }
-.project-card:hover .project-info-overlay { opacity: 1; }
+/* HOVER EFFECT - GRID ONLY */
+.project-grid .project-card:hover .project-img { visibility: hidden; }
+.project-grid .project-card:hover .project-info-overlay { opacity: 1; }
 
 .info-text {
     font-size: 13px;
     line-height: 1.6;
     text-align: center;
-    color: #000;
+    padding: 20px;
 }
 
 /* LIST VIEW MODE */
-.list-view { display: flex !important; flex-direction: column; gap: 15px; }
+.list-view {
+    display: flex !important;
+    flex-direction: column;
+}
 
 .list-view .project-card {
     display: flex;
     align-items: center;
     gap: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
 }
 
 .list-view .card-inner {
     width: 120px;
     height: 80px;
+    aspect-ratio: auto;
     flex-shrink: 0;
 }
 
-.list-view .project-info-overlay { display: none; }
-.list-view .list-text { display: block !important; font-size: 13px; }
-.list-text { display: none; } /* Hidden in Grid Mode */
+/* DISABLE HOVER ON LIST */
+.list-view .project-card:hover .project-img { visibility: visible; }
+.list-view .project-card:hover .project-info-overlay { display: none; }
+
+.list-view .list-text {
+    display: block !important;
+    font-size: 13px;
+}
+
+.list-text { display: none; }
+
+/* HOME PAGE SLIDER */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    object-fit: contain;
+}
+
+.slide.active { opacity: 1; }
