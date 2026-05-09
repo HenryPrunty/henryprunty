@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Henry Prunty Architecture</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="left-col">
+            <div class="nav-group">
+                <a href="index.html" class="logo">Henry Prunty Architecture</a>
+                <div class="nav-links">
+                    <a href="projects.html">Projects</a>
+                    <a href="bio.html">Bio</a>
+                </div>
+            </div>
+            <a href="mailto:henryprunty2006@gmail.com" class="contact-info">henryprunty2006@gmail.com</a>
+        </div>
+
+        <div class="right-col">
+            <div class="view-controls">
+                <button id="grid-btn" class="view-btn active">Grid</button>
+                <button id="list-btn" class="view-btn">List</button>
+            </div>
+
+            <div id="project-container" class="project-grid">
+                
+                <a href="project-one.html" class="project-card">
+                    <img src="https://via.placeholder.com/600x450/000000/FFFFFF?text=Project+1" class="project-img">
+                    <div class="project-info">
+                        <div class="info-text">
+                            <strong>BROOKLYN PASSIVE HOUSE</strong><br>
+                            FALL 2025 | INSTRUCTOR: NAME
+                        </div>
+                    </div>
+                </a>
+
+                <a href="project-two.html" class="project-card">
+                    <img src="https://via.placeholder.com/600x450/000000/FFFFFF?text=Project+2" class="project-img">
+                    <div class="project-info">
+                        <div class="info-text">
+                            <strong>WISSAHICKON COMPLEX</strong><br>
+                            SPRING 2026 | INSTRUCTOR: NAME
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const gridBtn = document.getElementById('grid-btn');
+        const listBtn = document.getElementById('list-btn');
+        const container = document.getElementById('project-container');
+
+        gridBtn.addEventListener('click', () => {
+            container.classList.remove('list-view');
+            gridBtn.classList.add('active');
+            listBtn.classList.remove('active');
+        });
+
+        listBtn.addEventListener('click', () => {
+            container.classList.add('list-view');
+            listBtn.classList.add('active');
+            gridBtn.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
