@@ -47,7 +47,7 @@ body {
     text-decoration: none;
     color: #000;
     font-size: 15px;
-    font-weight: 600; /* Semi-bold to match logo */
+    font-weight: 400; /* not bold */
 }
 
 .contact-info {
