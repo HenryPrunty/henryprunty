@@ -192,37 +192,35 @@ body {
 /* MOBILE RESPONSIVE RULES */
 @media (max-width: 768px) {
     body {
+        height: auto; /* Allows the page to grow with content */
         overflow-y: auto;
-        height: auto;
     }
 
     .main-wrapper {
+        display: flex;
         flex-direction: column;
+        min-height: 100vh; /* Forces the page to be at least the height of the phone */
         padding: 20px;
-        padding-bottom: 80px; /* Adds space so the email doesn't cover content */
-        gap: 30px;
-        min-height: 100vh;
-        position: relative;
+        padding-bottom: 60px; /* Leaves room for the email */
+        position: relative; 
     }
 
     .left-col {
         width: 100%;
         height: auto;
-        justify-content: flex-start;
-        gap: 20px;
-    }
-
-    .logo {
-        margin-bottom: 10px;
+        display: block; /* Stops the vertical 'space-between' behavior */
     }
 
     .contact-info {
-        position: absolute;
+        position: fixed; /* 'fixed' keeps it stuck to the screen even when scrolling */
         bottom: 20px;
         left: 20px;
-        margin: 0;
-        font-size: 13px;
+        background: white; /* Ensures text is readable over images */
+        width: 100%;
+        padding-top: 10px;
+        z-index: 100;
     }
+}
 
     .right-col {
         width: 100%;
