@@ -197,9 +197,12 @@ body {
     }
 
     .main-wrapper {
-        flex-direction: column; /* Stacks menu on top of content */
+        flex-direction: column;
         padding: 20px;
+        padding-bottom: 80px; /* Adds space so the email doesn't cover content */
         gap: 30px;
+        min-height: 100vh;
+        position: relative;
     }
 
     .left-col {
@@ -214,8 +217,11 @@ body {
     }
 
     .contact-info {
-        margin-top: 10px;
-        order: 3; /* Keeps email at the bottom of the top section */
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        margin: 0;
+        font-size: 13px;
     }
 
     .right-col {
