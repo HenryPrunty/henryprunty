@@ -5,9 +5,9 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #ffffff;
     color: #000;
-    height: 100vh;
+    height: 100vh; /* Keeps it locked to screen height */
     display: flex;
-    overflow-y: scroll; /* Add this line and remove 'overflow: hidden' */
+    overflow-y: scroll; /* Desktop should stay clean with no scrollbars if possible */
 }
 
 .main-wrapper {
@@ -16,8 +16,8 @@ body {
     height: 100vh;
     padding: 40px;
     gap: 60px;
+    box-sizing: border-box;
 }
-
 /* LEFT COLUMN */
 .left-col {
     width: 250px;
@@ -192,42 +192,41 @@ body {
 /* MOBILE RESPONSIVE RULES */
 @media (max-width: 768px) {
     body {
-        height: auto !important;
+        height: auto !important; /* Let mobile grow as long as it needs */
         overflow-y: auto !important;
+        display: block !important;
     }
 
     .main-wrapper {
         display: flex !important;
         flex-direction: column !important;
+        height: auto !important;
         min-height: 100vh;
         padding: 20px;
-        position: relative;
+        gap: 30px;
     }
 
     .left-col {
         width: 100% !important;
         height: auto !important;
-        display: contents; /* This 'breaks' the container so the email can move to the bottom */
+        display: flex !important;
+        flex-direction: column !important;
     }
 
     .nav-group {
-        order: 1; /* Puts name and links first */
-        margin-bottom: 30px;
+        order: 1;
     }
 
     .right-col {
-        order: 2; /* Puts the images/projects second */
+        order: 2;
         width: 100% !important;
-        margin-bottom: 60px;
+        height: 50vh; /* Gives the home image a clear 50% of the phone screen */
     }
 
     .contact-info {
-        order: 3; /* Forces the email to the very bottom of the flex list */
-        position: static !important;
-        margin-top: auto !important;
-        padding-top: 40px;
+        order: 3;
+        margin-top: 40px !important;
         padding-bottom: 20px;
-        display: block;
     }
 }
 
