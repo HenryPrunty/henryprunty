@@ -192,36 +192,44 @@ body {
 /* MOBILE RESPONSIVE RULES */
 @media (max-width: 768px) {
     body {
-        height: auto;
-        overflow-y: auto;
+        height: auto !important;
+        overflow-y: auto !important;
     }
 
     .main-wrapper {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* Keeps the sandwich at least as tall as the screen */
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 100vh;
         padding: 20px;
-        gap: 40px;
+        position: relative;
     }
 
     .left-col {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        /* No fixed height here lets it grow/shrink */
+        width: 100% !important;
+        height: auto !important;
+        display: contents; /* This 'breaks' the container so the email can move to the bottom */
     }
 
     .nav-group {
-        margin-bottom: 20px;
+        order: 1; /* Puts name and links first */
+        margin-bottom: 30px;
+    }
+
+    .right-col {
+        order: 2; /* Puts the images/projects second */
+        width: 100% !important;
+        margin-bottom: 60px;
     }
 
     .contact-info {
-        position: static; /* Removes the "floating" behavior */
-        margin-top: auto; /* This is the magic: it pushes the email to the bottom of the flex container */
+        order: 3; /* Forces the email to the very bottom of the flex list */
+        position: static !important;
+        margin-top: auto !important;
         padding-top: 40px;
         padding-bottom: 20px;
+        display: block;
     }
+}
 
     .right-col {
         width: 100%;
