@@ -188,3 +188,46 @@ body {
 }
 
 .slide.active { opacity: 1; }
+
+/* MOBILE RESPONSIVE RULES */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+        height: auto;
+    }
+
+    .main-wrapper {
+        flex-direction: column; /* Stacks menu on top of content */
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .left-col {
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .contact-info {
+        margin-top: 10px;
+        order: 3; /* Keeps email at the bottom of the top section */
+    }
+
+    .right-col {
+        width: 100%;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* One project per row on phones */
+    }
+
+    /* Adjusting the Home Slider for mobile height */
+    .slideshow-container {
+        height: 50vh; /* Takes up half the screen height on mobile */
+    }
+}
