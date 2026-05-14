@@ -280,17 +280,25 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.8);
+    background: none; /* Removes the white box */
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 20px; /* Larger hit area for your mouse, even if invisible */
     z-index: 5;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 24px; /* Makes the head clear */
+    font-weight: 200; /* Makes the arrow thin and refined */
+    color: #000;
+    transition: opacity 0.3s ease;
+    opacity: 0.4; /* Softens the arrow so it doesn't distract from the render */
 }
 
-.arrow-left { left: 0; }
-.arrow-right { right: 0; }
+.scroll-arrow:hover {
+    opacity: 1; /* Arrow becomes solid black when you hover over it */
+}
+
+.arrow-left { left: -50px; } /* Moves it slightly outside the image into the white space */
+.arrow-right { right: -50px; } /* Moves it slightly outside the image into the white space */
 
 /* Sub-section Heading */
 .subsection-title {
