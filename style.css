@@ -186,26 +186,35 @@ body {
         height: auto; 
         overflow-y: auto; 
         display: block;
+        width: 100%;
+        overflow-x: hidden; /* Prevents side-to-side wiggle */
     }
+
     .main-wrapper { 
         display: flex;
         flex-direction: column; 
-        padding: 20px; 
+        padding: 15px; /* Slightly tighter padding for mobile */
         height: auto; 
-        gap: 30px;
+        gap: 20px;
+        width: 100%;
+        box-sizing: border-box;
     }
+
     .left-col { 
         width: 100%; 
         height: auto; 
     }
+
     .right-col { 
-        width: 100%; 
+        width: 100% !important; 
         height: auto !important; 
         overflow: visible;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .slideshow-container {
-        height: 50vh !important;
+        height: 45vh !important;
         position: relative;
         width: 100%;
         display: block !important;
@@ -218,8 +227,12 @@ body {
 
     .graphic-container {
         width: 100% !important;
+        max-width: 100% !important;
         aspect-ratio: 4 / 3 !important; 
-        margin-bottom: 30px;
+        margin: 0 auto 30px auto !important;
+        position: relative !important;
+        overflow: visible !important; /* Let arrows sit on the very edge */
+        left: 0 !important;
     }
 
     .scroll-wrapper {
@@ -231,6 +244,35 @@ body {
         scroll-snap-align: center !important; 
         object-fit: cover; 
     }
+
+    .scroll-arrow {
+        display: block !important;
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 999 !important;
+        background: rgba(255, 255, 255, 0.8) !important; 
+        color: #000 !important;
+        padding: 12px 8px !important;
+        font-size: 18px !important;
+        border-radius: 4px !important;
+        border: 1px solid #ddd !important; /* Adds definition so they don't vanish */
+    }
+
+    .arrow-left { 
+        left: 5px !important; 
+    }
+
+    .arrow-right { 
+        right: 5px !important; 
+    }
+
+    .content-column {
+        width: 100% !important;
+        padding: 0 5px; 
+        box-sizing: border-box;
+    }
+}
 
     /* COMBINED & FIXED MOBILE ARROWS */
     .scroll-arrow {
