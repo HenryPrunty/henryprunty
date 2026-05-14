@@ -23,13 +23,15 @@
         <div class="right-col" style="overflow-y: auto;">
             
             <div class="graphic-container">
-                <button class="scroll-arrow arrow-left" onclick="this.nextElementSibling.scrollBy({left: -800, behavior: 'smooth'})">←</button>
+                <button class="scroll-arrow arrow-left" 
+        onclick="const s = this.nextElementSibling; s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">←</button>
                 <div class="scroll-wrapper">
                     <img src="images/brandyperspective2.png">
                     <img src="images/brandyperspective1.png">
                     <img src="images/brandyperspective3.png">
                 </div>
-                <button class="scroll-arrow arrow-right" onclick="this.previousElementSibling.scrollBy({left: 800, behavior: 'smooth'})">→</button>
+                <button class="scroll-arrow arrow-right" 
+        onclick="const s = this.previousElementSibling; s.scrollBy({left: s.clientWidth, behavior: 'smooth'})">→</button>
             </div>
 
             <div class="content-column" style="margin-bottom: 80px;">
@@ -45,13 +47,15 @@
             </div>
 
             <div class="graphic-container">
-                <button class="scroll-arrow arrow-left" onclick="this.nextElementSibling.scrollBy({left: -800, behavior: 'smooth'})">←</button>
+                <button class="scroll-arrow arrow-left" 
+        onclick="const s = this.nextElementSibling; s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">←</button>
                 <div class="scroll-wrapper">
                     <img src="images/brandyplan2-02.png">
                     <img src="images/brandyplan1-01.png">
                     <img src="images/brandyplan3-03.png">
                 </div>
-                <button class="scroll-arrow arrow-right" onclick="this.previousElementSibling.scrollBy({left: 800, behavior: 'smooth'})">→</button>
+                <button class="scroll-arrow arrow-right" 
+        onclick="const s = this.previousElementSibling; s.scrollBy({left: s.clientWidth, behavior: 'smooth'})">→</button>
             </div>
 
             <div class="graphic-container">
@@ -76,12 +80,14 @@
                 <h2 class="subsection-title">Process Work</h2>
             </div>
             <div class="graphic-container">
-                <button class="scroll-arrow arrow-left" onclick="this.nextElementSibling.scrollBy({left: -800, behavior: 'smooth'})">←</button>
+                <button class="scroll-arrow arrow-left" 
+        onclick="const s = this.nextElementSibling; s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">←</button>
                 <div class="scroll-wrapper">
                     <img src="images/brandywine-process1.jpg">
                     <img src="images/brandywine-process2.jpg">
                 </div>
-                <button class="scroll-arrow arrow-right" onclick="this.previousElementSibling.scrollBy({left: 800, behavior: 'smooth'})">→</button>
+                <button class="scroll-arrow arrow-right" 
+        onclick="const s = this.previousElementSibling; s.scrollBy({left: s.clientWidth, behavior: 'smooth'})">→</button>
             </div>
 
         </div>
