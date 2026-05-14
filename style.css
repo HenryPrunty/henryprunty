@@ -211,3 +211,36 @@ body {
         height: 100%;
     }
 }
+
+/* PROJECT DETAIL PAGE SPECIFICS */
+.project-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project-intro {
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 550px;
+    margin-bottom: 60px;
+}
+
+.section-heading {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.caption {
+    font-size: 11px;
+    color: #999;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.image-spacing {
+    margin-bottom: 80px;
+}
