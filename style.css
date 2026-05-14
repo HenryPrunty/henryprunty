@@ -419,3 +419,28 @@ body {
     max-width: 1000px; /* Matches the graphic-container max-width */
     margin: 0 auto; /* Centers it, aligning the left edge with the images */
 }
+
+/* SIDE-BY-SIDE 17x11 LAYOUT */
+.horizontal-pair {
+    display: flex;
+    gap: 20px; /* Space between the two graphics */
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+}
+
+.horizontal-pair .graphic-container {
+    width: 50%; /* Each takes up half the row */
+    margin: 0; /* Remove the auto-center margin since the parent handles it */
+}
+
+/* Mobile Fix for Side-by-Side */
+@media (max-width: 768px) {
+    .horizontal-pair {
+        flex-direction: column; /* Stack them vertically on phones */
+        width: 100%;
+    }
+    .horizontal-pair .graphic-container {
+        width: 100%;
+    }
+}
