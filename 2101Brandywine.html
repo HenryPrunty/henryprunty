@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Title | Henry Prunty Architecture</title>
+    <title>2101 Brandywine St. | Henry Prunty Architecture</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -22,47 +22,49 @@
 
         <div class="right-col" style="overflow-y: auto;">
             
+            <div class="graphic-container">
+                <button class="scroll-arrow arrow-left" onclick="this.nextElementSibling.scrollBy({left: -800, behavior: 'smooth'})">←</button>
+                <div class="scroll-wrapper">
+                    <img src="images/brandywine-render1.jpg">
+                    <img src="images/brandywine-render2.jpg">
+                    <img src="images/brandywine-render3.jpg">
+                </div>
+                <button class="scroll-arrow arrow-right" onclick="this.previousElementSibling.scrollBy({left: 800, behavior: 'smooth'})">→</button>
+            </div>
+
             <div style="margin-bottom: 80px;">
-                <h1 style="font-size: 18px; font-weight: 600; margin-bottom: 15px;">Brooklyn Passive House</h1>
-                <p style="font-size: 13px; line-height: 1.6; max-width: 550px; color: #333;">
-                    This is your primary intro. For the Brooklyn project, you can talk about the site 
-                    at 78 Third Place and your research into solar paths and climate data.
+                <h1 class="project-title">2101 Brandywine St.</h1>
+                <p class="project-meta">Instructor: Patrick Till — Spring 2026</p>
+                <p class="project-intro">
+                    Short description of the project goes here. Focusing on the architectural 
+                    intervention and site context of Brandywine Street.
                 </p>
             </div>
 
-            <div class="project-content" style="display: flex; flex-direction: column; gap: 80px; padding-bottom: 120px;">
-
-                <div class="module-image">
-                    <img src="images/hero-render.jpg" style="width: 100%; height: auto; display: block;">
-                    <p style="font-size: 11px; color: #999; margin-top: 12px; text-transform: uppercase; letter-spacing: 0.05em;">
-                        Fig 01. Exterior Perspective – Solar Integration
-                    </p>
+            <div class="graphic-container">
+                <button class="scroll-arrow arrow-left" onclick="this.nextElementSibling.scrollBy({left: -800, behavior: 'smooth'})">←</button>
+                <div class="scroll-wrapper">
+                    <img src="images/brandywine-plan1.jpg">
+                    <img src="images/brandywine-plan2.jpg">
+                    <img src="images/brandywine-plan3.jpg">
                 </div>
-
-                <div class="module-text" style="max-width: 500px;">
-                    <h2 style="font-size: 14px; font-weight: 600; margin-bottom: 12px; text-transform: uppercase;">Technical Analysis</h2>
-                    <p style="font-size: 13px; line-height: 1.6;">
-                        If a project needs sub-sections, use this block. You can explain the "Passive House Plus" 
-                        standards or the specific insulation strategies you used here.
-                    </p>
-                </div>
-
-                <div class="module-double-image" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <div>
-                        <img src="images/plan-1.png" style="width: 100%; height: auto;">
-                        <p style="font-size: 11px; color: #999; margin-top: 10px;">First Floor Plan</p>
-                    </div>
-                    <div>
-                        <img src="images/plan-2.png" style="width: 100%; height: auto;">
-                        <p style="font-size: 11px; color: #999; margin-top: 10px;">Second Floor Plan</p>
-                    </div>
-                </div>
-
-                <div class="module-image">
-                    <img src="images/long-section.png" style="width: 100%; height: auto;">
-                </div>
-
+                <button class="scroll-arrow arrow-right" onclick="this.previousElementSibling.scrollBy({left: 800, behavior: 'smooth'})">→</button>
             </div>
+
+            <div class="graphic-container">
+                <img src="images/brandywine-section.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <h2 class="subsection-title">Process Work</h2>
+            <div class="graphic-container">
+                <button class="scroll-arrow arrow-left" onclick="this.nextElementSibling.scrollBy({left: -800, behavior: 'smooth'})">←</button>
+                <div class="scroll-wrapper">
+                    <img src="images/brandywine-process1.jpg">
+                    <img src="images/brandywine-process2.jpg">
+                </div>
+                <button class="scroll-arrow arrow-right" onclick="this.previousElementSibling.scrollBy({left: 800, behavior: 'smooth'})">→</button>
+            </div>
+
         </div>
     </div>
 </body>
