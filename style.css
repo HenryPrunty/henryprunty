@@ -227,17 +227,18 @@ body {
 
     .graphic-container {
         width: 100% !important;
-        max-width: 100% !important;
         aspect-ratio: 4 / 3 !important; 
         margin: 0 auto 30px auto !important;
+        background: #ffffff !important; /* Ensures the background of the box is clean */
         position: relative !important;
-        overflow: visible !important; /* Let arrows sit on the very edge */
-        left: 0 !important;
+        overflow: visible !important;
     }
 
-    .scroll-wrapper {
-        scroll-snap-type: x mandatory !important; 
-        -webkit-overflow-scrolling: touch; 
+    .scroll-wrapper img {
+        scroll-snap-align: center !important; 
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important; /* CHANGE THIS FROM COVER TO CONTAIN */
     }
 
     .scroll-wrapper img {
