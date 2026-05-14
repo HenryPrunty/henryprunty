@@ -247,11 +247,11 @@ body {
 
 /* 17x11 Aspect Ratio Container */
 .graphic-container {
-    width: 85%; /* Reduced from 100% to make it smaller */
-    max-width: 1000px; /* Prevents it from getting too huge on ultra-wide monitors */
+    width: 85%;
+    max-width: 1000px;
     aspect-ratio: 17 / 11;
     position: relative;
-    margin: 0 auto 40px auto; /* Centered with 'auto' left/right and 40px bottom spacing */
+    margin: 0 auto 40px auto; 
     background: #f9f9f9;
 }
 
@@ -321,4 +321,10 @@ body {
     max-height: 80vh; /* Prevents it from being taller than the screen */
     height: auto;
     display: block;
+}
+
+.content-column {
+    width: 85%; /* Matches the graphic-container width */
+    max-width: 1000px; /* Matches the graphic-container max-width */
+    margin: 0 auto; /* Centers it, aligning the left edge with the images */
 }
