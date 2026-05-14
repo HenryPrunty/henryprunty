@@ -31,21 +31,20 @@
             </div>
 
             <div class="content-column">
-    <h2 class="subsection-title">The Site</h2>
-    <p class="project-intro" style="margin-bottom: 20px;">Analysis of existing conditions, urban density, and site constraints.</p>
-</div>
+                <h2 class="subsection-title">The Site</h2>
+                <p class="project-intro" style="margin-bottom: 20px;">Analysis of existing conditions, urban density, and site constraints.</p>
+            </div>
 
-<div class="horizontal-pair">
-    <div class="graphic-container">
-        <img src="images/broad-street/site-map-1.jpg" style="width: 100%; height: 100%; object-fit: contain;">
-        <p class="caption">Urban Mapping</p>
-    </div>
-
-    <div class="graphic-container">
-        <img src="images/broad-street/context-1.jpg" style="width: 100%; height: 100%; object-fit: contain;">
-        <p class="caption">Context Analysis</p>
-    </div>
-</div>
+            <div class="horizontal-pair">
+                <div class="graphic-container">
+                    <button class="scroll-arrow arrow-left" onclick="const s = this.parentElement.querySelector('.scroll-wrapper'); s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">←</button>
+                    <div class="scroll-wrapper">
+                        <img src="images/broad-street/site-map-1.jpg">
+                        <img src="images/broad-street/site-map-2.jpg">
+                    </div>
+                    <button class="scroll-arrow arrow-right" onclick="const s = this.parentElement.querySelector('.scroll-wrapper'); s.scrollBy({left: s.clientWidth, behavior: 'smooth'})">→</button>
+                    <p class="caption">Urban Mapping</p>
+                </div>
 
                 <div class="graphic-container">
                     <button class="scroll-arrow arrow-left" onclick="const s = this.parentElement.querySelector('.scroll-wrapper'); s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">←</button>
