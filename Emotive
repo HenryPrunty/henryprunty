@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broad Street Corridor | Henry Prunty Architecture</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="left-col">
+            <div class="nav-group">
+                <a href="index.html" class="logo">Henry Prunty Architecture</a>
+                <div class="nav-links">
+                    <a href="projects.html">Projects</a>
+                    <a href="bio.html">Bio</a>
+                </div>
+            </div>
+            <a href="mailto:henryprunty2006@gmail.com" class="contact-info">henryprunty2006@gmail.com</a>
+        </div>
+
+        <div class="right-col" style="overflow-y: auto;">
+            
+            <div class="content-column" style="margin-top: 40px; margin-bottom: 60px;">
+                <h1 class="project-title">Broad Street Corridor Intervention</h1>
+                <p class="project-meta">Instructor: Na Wei — Spring 2026</p>
+                <div class="project-intro">
+                    <p>Brief description of the corridor intervention goes here. This project explores urban-scale strategies along North Broad Street.</p>
+                </div>
+            </div>
+
+            <div class="content-column">
+                <h2 class="subsection-title">The Site</h2>
+                <p class="project-intro" style="margin-bottom: 20px;">Analysis of existing conditions, urban density, and site constraints.</p>
+            </div>
+
+            <div class="horizontal-pair">
+                <div class="graphic-container">
+                    <button class="scroll-arrow arrow-left" onclick="const s = this.parentElement.querySelector('.scroll-wrapper'); s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">←</button>
+                    <div class="scroll-wrapper">
+                        <img src="images/broad-street/site-map-1.jpg">
+                        <img src="images/broad-street/site-map-2.jpg">
+                    </div>
+                    <button class="scroll-arrow arrow-right" onclick="const s = this.parentElement.querySelector('.scroll-wrapper'); s.scrollBy({left: s.clientWidth, behavior: 'smooth'})">→</button>
+                    <p class="caption">Urban Mapping</p>
+                </div>
+
+                <div class="graphic-container">
+                    <button class="scroll-arrow arrow-left" onclick="const s = this.parentElement.querySelector('.scroll-wrapper'); s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">←</button>
+                    <div class="scroll-wrapper">
+                        <img src="images/broad-street/context-1.jpg">
+                        <img src="images/broad-street/context-2.jpg">
+                    </div>
+                    <button class="scroll-arrow arrow-right" onclick="const s = this.parentElement.querySelector('.scroll-wrapper'); s.scrollBy({left: s.clientWidth, behavior: 'smooth'})">→</button>
+                    <p class="caption">Context Photos</p>
+                </div>
+            </div>
+
+            <div class="content-column">
+                <h2 class="subsection-title">Our Interventions</h2>
+            </div>
+
+            <div class="horizontal-pair">
+                <div class="graphic-container">
+                    <button class="scroll-arrow arrow-left" onclick="const s = this.parentElement.querySelector('.scroll-wrapper'); s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">←</button>
+                    <div class="scroll-wrapper">
+                        <img src="images/broad-street/intervention-a1.jpg">
+                        <img src="images/broad-street/intervention-a2.jpg">
+                    </div>
+                    <button class="scroll-arrow arrow-right" onclick="const s = this.parentElement.querySelector('.scroll-wrapper'); s.scrollBy({left: s.clientWidth, behavior: 'smooth'})">→</button>
+                    <p class="caption">Strategy A</p>
+                </div>
+
+                <div class="graphic-container">
+                    <button class="scroll-arrow arrow-left" onclick="const s = this.parentElement.querySelector('.scroll-wrapper'); s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">←</button>
+                    <div class="scroll-wrapper">
+                        <img src="images/broad-street/intervention-b1.jpg">
+                        <img src="images/broad-street/intervention-b2.jpg">
+                    </div>
+                    <button class="scroll-arrow arrow-right" onclick="const s = this.parentElement.querySelector('.scroll-wrapper'); s.scrollBy({left: s.clientWidth, behavior: 'smooth'})">→</button>
+                    <p class="caption">Strategy B</p>
+                </div>
+            </div>
+
+            <div class="content-column">
+                <h2 class="subsection-title" style="margin-top: 80px;">Testing</h2>
+                <div style="height: 300px; border: 1px dashed #ccc; display: flex; align-items: center; justify-content: center; color: #999;">
+                    Placeholder for Testing Content
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
