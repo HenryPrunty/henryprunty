@@ -55,6 +55,30 @@
                 <img src="images/brandywine-section.jpg" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
 
+            <div class="graphic-container">
+                <img src="images/brandywine-section.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <div class="centered-image-container">
+                <img src="images/model-photo1.jpg" class="model-photo">
+                <p class="caption">Physical Study Model - Site Context</p>
+            </div>
+
+            <div class="centered-image-container">
+                <img src="images/model-photo2.jpg" class="model-photo">
+                <p class="caption">Massing Detail</p>
+            </div>
+
+            <h2 class="subsection-title">Process Work</h2>
+            ```
+
+### Why this works:
+* **Visual Alignment:** By using `display: flex` and `align-items: center`, your model photos will sit perfectly in the middle of the "Right Column," even if they are vertical (portrait) or standard 4:3 photos.
+* **Vertical Control:** The `max-height: 80vh` ensures that a very tall vertical photo doesn't force the viewer to scroll forever just to see one image; it will scale it down so it fits comfortably on the screen.
+* **Consistency:** The caption under the model photo will use the exact same styling as the 17x11 graphics, keeping the "Lars Müller" structure intact.
+
+**Once you have those photos in, how is the vertical flow of the page looking? Does it feel like a cohesive narrative from renders down to the physical models?**
+
             <h2 class="subsection-title">Process Work</h2>
             <div class="graphic-container">
                 <button class="scroll-arrow arrow-left" onclick="this.nextElementSibling.scrollBy({left: -800, behavior: 'smooth'})">←</button>
