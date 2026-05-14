@@ -62,19 +62,23 @@
                 <img src="images/brandysection-01.png" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
 
-            <div class="centered-image-container">
-                <img src="images/model-photo1.jpg" class="model-photo">
-                <div class="content-column">
-                    <p class="caption">Physical Study Model - Site Context</p>
+            <div class="content-column">
+                <h2 class="subsection-title">Physical Model</h2>
+            </div>
+            <div class="graphic-container">
+                <button class="scroll-arrow arrow-left" 
+    onclick="const s = this.parentElement.querySelector('.scroll-wrapper'); s.scrollBy({left: -s.clientWidth, behavior: 'smooth'})">←</button>
+                <div class="scroll-wrapper">
+                    <img src="images/brandymodel1.png">
+                    <img src="images/brandymodel2.png">
+                    <img src="images/brandymodel3.png">
                 </div>
+                <button class="scroll-arrow arrow-right" 
+    onclick="const s = this.parentElement.querySelector('.scroll-wrapper'); s.scrollBy({left: s.clientWidth, behavior: 'smooth'})">→</button>
             </div>
 
-            <div class="centered-image-container">
-                <img src="images/model-photo2.jpg" class="model-photo">
-                <div class="content-column">
-                    <p class="caption">Massing Detail</p>
-                </div>
-            </div>
+        </div>
+    </div>
 
             <div class="content-column">
                 <h2 class="subsection-title">Process Work</h2>
