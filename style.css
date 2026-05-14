@@ -200,39 +200,51 @@ body {
     }
     .right-col { 
         width: 100%; 
-        height: auto; /* Keeps home image sized reasonably on mobile */
+        height: auto !important; 
         overflow: visible;
     }
+
+    /* FIX: This brings back the homepage image */
+    .slideshow-container {
+        height: 50vh !important;
+        position: relative;
+        width: 100%;
+        display: block !important;
+    }
+
     .project-grid { 
         grid-template-columns: 1fr; 
         height: auto;
     }
-    .slideshow-container {
-        height: 100%;
-    }
+
+    /* FIX: Project page graphics */
     .graphic-container {
-        width: 100% !important; /* Take up full width on small screens */
-        aspect-ratio: 4 / 3 !important; /* Make it taller so it's not a tiny sliver */
+        width: 100% !important;
+        aspect-ratio: 4 / 3 !important; 
         margin-bottom: 30px;
     }
 
     .scroll-wrapper {
-        scroll-snap-type: x mandatory !important; /* Forces the "flip" behavior */
-        -webkit-overflow-scrolling: touch; /* Makes scrolling feel "smooth" on iPhones */
+        scroll-snap-type: x mandatory !important; 
+        -webkit-overflow-scrolling: touch; 
     }
 
     .scroll-wrapper img {
-        scroll-snap-align: center !important; /* Keeps the image centered when you flip */
-        object-fit: cover; /* Ensures the image fills the new 4:3 height */
+        scroll-snap-align: center !important; 
+        object-fit: cover; 
     }
 
+    /* FIX: This brings back the arrows on mobile */
     .scroll-arrow {
-        display: none; /* Optional: Hide arrows on mobile since people prefer swiping */
+        display: block !important; 
+        font-size: 20px;
+        padding: 10px;
+        opacity: 0.6;
     }
 
     .content-column {
         width: 100% !important;
-        padding: 0 10px; /* Gives the text a little breathing room from the edge */
+        padding: 0 5px; 
     }
 }
 
