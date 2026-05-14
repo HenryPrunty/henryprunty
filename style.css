@@ -247,10 +247,11 @@ body {
 
 /* 17x11 Aspect Ratio Container */
 .graphic-container {
-    width: 100%;
+    width: 85%; /* Reduced from 100% to make it smaller */
+    max-width: 1000px; /* Prevents it from getting too huge on ultra-wide monitors */
     aspect-ratio: 17 / 11;
     position: relative;
-    margin-bottom: 20px;
+    margin: 0 auto 40px auto; /* Centered with 'auto' left/right and 40px bottom spacing */
     background: #f9f9f9;
 }
 
