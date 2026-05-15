@@ -336,6 +336,14 @@ body {
     margin-bottom: 80px;
 }
 
+.project-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 40px; /* Adjust this number to match the spacing you like */
+    display: block; /* Ensures the margin actually pushes the text below it */
+}
+
 /* 17x11 Aspect Ratio Container */
 .graphic-container {
     width: 85%;
