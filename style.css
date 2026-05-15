@@ -343,6 +343,14 @@ body {
     margin-bottom: 40px; /* Adjust this number to match the spacing you like */
     display: block; /* Ensures the margin actually pushes the text below it */
 }
+.project-intro p {
+    margin-bottom: 1.5em; /* Skips a line between paragraphs */
+    line-height: 1.6;     /* Optional: Makes the text itself easier to read */
+}
+
+.project-intro p:last-child {
+    margin-bottom: 0;     /* Keeps the bottom of the text clean */
+}
 
 /* 17x11 Aspect Ratio Container */
 .graphic-container {
