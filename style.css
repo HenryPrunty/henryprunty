@@ -340,8 +340,13 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     color: #666;
-    margin-bottom: 40px; /* Adjust this number to match the spacing you like */
-    display: block; /* Ensures the margin actually pushes the text below it */
+    margin-bottom: 4px; /* A small gap between the instructor and group members */
+    display: block;
+}
+
+/* This targets ONLY the last line of meta info before the description starts */
+.project-meta:last-of-type {
+    margin-bottom: 40px; 
 }
 .project-intro p {
     margin-bottom: 1.5em; /* Skips a line between paragraphs */
